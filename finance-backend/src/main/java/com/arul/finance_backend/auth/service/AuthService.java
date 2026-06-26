@@ -31,8 +31,16 @@ public class AuthService {
     }
 
     public String register(@RequestBody RegisterRequest registerRequest){
-        // String encryptedPassword = passwordEncoder.encode(registerRequest.Password());
+        String encryptedPassword = passwordEncoder.encode(registerRequest.Password());
         String token = jwtUtills.getToken(registerRequest.UserName(), registerRequest.role());
+        
+        User newUser = User.builder()
+            .userName(registerRequest.UserName())
+            .email(registerRequest.email())
+            .userRole(registerRequest.role())
+            .password(encryptedPassword)
+            .build(); 
+        userRepository.save(newUser);
         return token;
     }
 

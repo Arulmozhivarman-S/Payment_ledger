@@ -5,6 +5,15 @@ spring:
     password: Arul@123
     driver-class-name: com.mysql.cj.jdbc.Driver
 
+    
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: "YOUR_GOOGLE_CLIENT_ID"
+            client-secret: "YOUR_GOOGLE_CLIENT_SECRET"
+
   jpa:
     hibernate:
       ddl-auto: update
