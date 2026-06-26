@@ -11,12 +11,14 @@ import com.arul.finance_backend.auth.service.AuthService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 
 @RestController
 @RequiredArgsConstructor
+@CrossOrigin(origins = "https://payment-ledger-frontend.onrender.com/")
 public class AuthController {
     
     private final AuthService authService;
