@@ -2,7 +2,7 @@
 
 
 LIVE URL   =   https://payment-ledger-backend-z6t2.onrender.com/
-
+DATABASE URL  =  https://console.aiven.io/account/a5c30ad3b212/project/finance-ledger/services/finance-ledger/overview
 
 An event-driven money-movement backend built on a double-entry ledger.
 Transfers are **idempotent**, **atomic**, and safe under concurrency — the
